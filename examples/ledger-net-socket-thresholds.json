@@ -1,0 +1,17 @@
+{
+  "repo": "ledger-net-socket-forge",
+  "thresholds": {
+    "signal": 3,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 2,
+    "ship": 159,
+    "watch": 103
+  },
+  "terms": [
+    "packet span",
+    "retry pressure",
+    "route drift",
+    "socket risk"
+  ]
+}
