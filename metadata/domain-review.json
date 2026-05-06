@@ -1,0 +1,73 @@
+{
+  "repo": "ledger-net-socket-forge",
+  "language": "TypeScript",
+  "category": "Networking",
+  "goal": "Design a TypeScript verification harness for socket systems, covering simulation kernel, seeded input scenarios, and failure-oriented tests.",
+  "review_model": {
+    "terms": [
+      "packet span",
+      "retry pressure",
+      "route drift",
+      "socket risk"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "packet span",
+      "signal": 60,
+      "slack": 28,
+      "drag": 17,
+      "confidence": 60,
+      "score": 157,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "retry pressure",
+      "signal": 66,
+      "slack": 22,
+      "drag": 13,
+      "confidence": 86,
+      "score": 201,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "route drift",
+      "signal": 74,
+      "slack": 46,
+      "drag": 30,
+      "confidence": 67,
+      "score": 171,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "socket risk",
+      "signal": 57,
+      "slack": 47,
+      "drag": 25,
+      "confidence": 88,
+      "score": 174,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "packet span",
+      "signal": 83,
+      "slack": 23,
+      "drag": 12,
+      "confidence": 80,
+      "score": 233,
+      "lane": "ship"
+    }
+  ]
+}
